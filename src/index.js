@@ -34,10 +34,11 @@ export default function () {
         if (evaluated.confident) {
             return evaluated.value;
         }
-
-        throw path.buildCodeFrameError(
-            '[React Intl] Messages must be statically evaluate-able for extraction.'
-        );
+        }
+        return ""
+        // throw path.buildCodeFrameError(
+        //     '[React Intl] Messages must be statically evaluate-able for extraction.'
+        // );
     }
 
     function getMessageDescriptorValue(path) {
@@ -49,10 +50,10 @@ export default function () {
         if (evaluated.confident) {
             return evaluated.value;
         }
-
-        throw path.buildCodeFrameError(
-            '[React Intl] Messages must be statically evaluate-able for extraction.'
-        );
+        return ""
+        // throw path.buildCodeFrameError(
+        //     '[React Intl] Messages must be statically evaluate-able for extraction.'
+        // );
     }
 
     function createMessageDescriptor(propPaths, options = {}) {
